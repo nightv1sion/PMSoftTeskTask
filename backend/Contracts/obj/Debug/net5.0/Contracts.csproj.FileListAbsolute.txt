@@ -1,0 +1,15 @@
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\bin\Debug\net5.0\Contracts.deps.json
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\bin\Debug\net5.0\Contracts.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\bin\Debug\net5.0\Contracts.pdb
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\bin\Debug\net5.0\Entities.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\bin\Debug\net5.0\Entities.pdb
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.csproj.AssemblyReference.cache
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfoInputs.cache
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.AssemblyInfo.cs
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.csproj.CoreCompileInputs.cache
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.csproj.CopyComplete
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\refint\Contracts.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\Contracts.pdb
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\Contracts\obj\Debug\net5.0\ref\Contracts.dll
