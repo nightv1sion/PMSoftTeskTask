@@ -1,4 +1,5 @@
 ﻿using API.ActionFilters;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Service.Contracts;
@@ -20,6 +21,7 @@ namespace API.Controllers
         [HttpGet("all")]
         public async Task<ActionResult> GetAllBooks()
         {
+            var claims = User.Claims;
             var books = await _service.BookService.GetAllBooksAsync(false);
             return Ok(books);
         }
@@ -32,6 +34,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "ShouldBeAdmin")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<ActionResult> CreateBook(BookForCreationDto bookForCreation)
         {
@@ -40,6 +43,7 @@ namespace API.Controllers
         }
 
         [HttpPut("{id:guid}")]
+        [Authorize(Policy = "ShouldBeAdmin")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<ActionResult> UpdateBook(Guid id, BookForUpdateDto bookForUpdate)
         {
@@ -47,7 +51,8 @@ namespace API.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [Authorize(Policy = "ShouldBeAdmin")]
+        [HttpDelete("{id:guid}")]
         public async Task<ActionResult> DeleteBook(Guid id)
         {
             await _service.BookService.DeleteBookAsync(id);

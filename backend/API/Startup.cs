@@ -38,6 +38,10 @@ namespace API
             services.ConfigurePostgreSqlContext(Configuration);
             services.ConfigureMapper();
             services.ConfigureValidationFilter();
+            services.ConfigureIdentity();
+            services.ConfigureJWT(Configuration);
+            services.ConfigureSeedData();
+            services.ConfigureAuthorization();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +58,9 @@ namespace API
 
             app.UseHttpsRedirection();
 
+
+            app.UseAuthentication();
+            
             app.UseRouting();
 
             app.UseAuthorization();

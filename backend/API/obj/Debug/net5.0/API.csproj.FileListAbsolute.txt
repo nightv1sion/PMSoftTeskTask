@@ -53,3 +53,17 @@ C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Contra
 C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Service.Contracts.pdb
 C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Shared.pdb
 C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\obj\Debug\net5.0\API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API\bin\Debug\net5.0\Npgsql.EntityFrameworkCore.PostgreSQL.Design.dll
