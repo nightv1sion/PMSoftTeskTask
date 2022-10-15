@@ -34,7 +34,7 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        [Authorize(Roles = "ShouldBeAdmin")]
+        [Authorize(Policy = "ShouldBeAdmin")]
         [ServiceFilter(typeof(ValidationFilterAttribute))]
         public async Task<ActionResult> CreateBook(BookForCreationDto bookForCreation)
         {

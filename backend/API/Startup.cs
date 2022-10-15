@@ -42,6 +42,7 @@ namespace API
             services.ConfigureJWT(Configuration);
             services.ConfigureSeedData();
             services.ConfigureAuthorization();
+            services.ConfigureCORS();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -64,6 +65,8 @@ namespace API
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseCors("DefaultPolicy");
 
             app.UseEndpoints(endpoints =>
             {

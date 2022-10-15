@@ -1,0 +1,12 @@
+.operations {
+    display: flex;
+}
+
+.operations div {
+    flex: 50%;
+}
+
+.booklist > .table {
+    margin: auto;
+    margin-top: 1%;
+}

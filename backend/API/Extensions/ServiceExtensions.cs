@@ -79,5 +79,18 @@ namespace API.Extensions
                 });
             });
         }
+        public static void ConfigureCORS(this IServiceCollection services)
+        {
+            services.AddCors(opts =>
+            {
+                opts.AddPolicy("DefaultPolicy", policy =>
+                {
+                    policy.WithOrigins("http://localhost:3000")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod()
+                    .AllowCredentials();
+                });
+            });
+        }
     }
 }
