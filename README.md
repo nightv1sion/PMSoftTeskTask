@@ -8,14 +8,17 @@
   
        dotnet ef database update
  
-2. Запустить серверное приложение:
+2. Запустить серверное приложение (необходимо иметь установленные [.NET](https://learn.microsoft.com/ru-ru/dotnet/core/install/windows?tabs=net60) и [EF Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet):
 - Открыть папку backend/API в командной строке
-- Ввести команду: 
+- Ввести команду для запуска приложения: 
   
        dotnet run
-3. Запустить клиентское приложение:
+3. Запустить клиентское приложение (необходимо иметь установленные [Node.js и npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)):
 - Открыть папку frontend в командной строке
-- Ввести команду:
+- Ввести команду для установки необходимых зависимостей: 
+
+       npm install
+- Ввести команду для запуска приложения:
        
        npm start
 
