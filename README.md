@@ -6,7 +6,7 @@
 - Открыть папку backend/API в командной строке
 - Ввести команду: 
   
-       dotnet ef update database
+       dotnet ef database update
  
 2. Запустить серверное приложение:
 - Открыть папку backend/API в командной строке
