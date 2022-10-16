@@ -49,6 +49,8 @@ namespace API.Extensions
                         {
                             case BadRequestException: errorDetails.StatusCode = StatusCodes.Status400BadRequest; 
                                 context.Response.StatusCode = StatusCodes.Status400BadRequest; break;
+                            case ConflictException: errorDetails.StatusCode = StatusCodes.Status409Conflict;
+                                context.Response.StatusCode = StatusCodes.Status409Conflict; break;
                             default: context.Response.StatusCode = 500; break;
                         }
                         await context.Response.WriteAsync(errorDetails.ToString());

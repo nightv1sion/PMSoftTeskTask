@@ -2,7 +2,6 @@ import { FormEvent, useEffect } from 'react';
 import {Button, Modal} from 'react-bootstrap'
 import { Book } from './interfaces';
 export default function ModalWindow(props: modalWindowProps){
-    
 
     useEffect(() => {}, [props.children]);
     

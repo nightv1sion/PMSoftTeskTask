@@ -10,3 +10,19 @@
     margin: auto;
     margin-top: 1%;
 }
+
+.delete-choosed-books {
+    flex: 46%;
+    margin: auto;
+    text-align: start;
+}
+.buttons-containter{
+    width: 75%;
+    margin: auto;
+    display: flex;
+}
+
+.create-new-book {
+    flex: 54%;
+    text-align: start;
+}

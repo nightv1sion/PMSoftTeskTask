@@ -10,6 +10,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Security.Claims;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 
 namespace Service
@@ -37,6 +38,25 @@ namespace Service
             
             return jwtHandler.WriteToken(tokenOpts);
         }
+        public async Task RegisterUserAsync(UserForRegistrationDto userForRegistration)
+        {
+            var user = await _userManager.FindByNameAsync(userForRegistration.UserName);
+            if (user is not null)
+                throw new UserConflictException(userForRegistration.UserName);
+
+            var newUser = new IdentityUser<Guid>()
+            {
+                UserName = userForRegistration.UserName,
+            };
+
+            var result = await _userManager.CreateAsync(newUser, userForRegistration.Password);
+            if (!result.Succeeded)
+                throw new Exception(JsonSerializer.Serialize(result.Errors));
+
+            if (userForRegistration.IsAdmin)
+                await _userManager.AddToRoleAsync(newUser, "admin");
+        }
+
         private SigningCredentials GetSigningCredentials()
         {
             var jwtSettings = _configuration.GetSection("JwtSettings");

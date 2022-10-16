@@ -21,5 +21,11 @@ namespace API.Controllers
             var token = await _service.AuthencationService.CreateTokenAsync(userForAuth);
             return Ok(token);
         }
+        [HttpPost("register")]
+        public async Task<ActionResult> RegisterUser(UserForRegistrationDto userForRegistration)
+        {
+            await _service.AuthencationService.RegisterUserAsync(userForRegistration);
+            return Ok();
+        }
     }
 }

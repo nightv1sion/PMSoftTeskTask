@@ -1,7 +1,7 @@
 import axios from "axios";
 import { FormikErrors, useFormik } from "formik";
 import { FormEvent, useEffect, useState } from "react";
-import { Book } from "./interfaces";
+import { Book, BookForUpdateDto } from "./interfaces";
 import ModalWindow from "./ModalWindow";
 
 export default function UpdateBookModal(props: updateBookModalProps){
@@ -9,12 +9,19 @@ export default function UpdateBookModal(props: updateBookModalProps){
     const [errorMessage, setErrorMessage] = useState<string>("");
 
     const updateBook = () => {
-        const book = formik.values;
+        let token = props.getToken();
+        if(!token)
+        {
+            props.onHide();
+            props.setToken();
+        }
+        const book:BookForUpdateDto = formik.values;
         const baseUrl = process.env.REACT_APP_API;
-        const url = "book/" + book.id;
-        axios({method: "PUT", baseURL: baseUrl, url: url, data: JSON.stringify(book)})
+        const url = "book/" + formik.values.id;
+
+        axios({method: "PUT", baseURL: baseUrl, url: url, data: JSON.stringify(book), headers: {"Authorization": "Bearer " + token, "Content-Type": "application/json"}})
         .then(() => {props.getBooks(); props.onHide()})
-        .catch(() => { setErrorMessage("Something went wrong when putting to the server"); setTimeout(() => {setErrorMessage("")}, 5000)});
+        .catch((error) => { setErrorMessage("Something went wrong when putting to the server"); setTimeout(() => {setErrorMessage("")}, 5000); props.setToken();});
     }
 
     const validate = (values: Book) => {
@@ -42,10 +49,22 @@ export default function UpdateBookModal(props: updateBookModalProps){
         validate
     });
 
-    useEffect(() => {}, [props.book, props.showModal]);
+    useEffect(() => {
+        formik.setValues({
+            id: props.book.id,
+            name: props.book.name,
+            year: props.book.year,
+            genre: props.book.genre,
+            author: props.book.author
+        });
+    }, [props.book, props.showModal]);
 
-    return <ModalWindow title={"Edit '" + props.book.name + "' book"} onHide={props.onHide} onSubmit={() => formik.handleSubmit()} 
-    isSubmitDisabled={() => { return (formik.errors.author || formik.errors.name || formik.errors.genre || formik.errors.year || formik.values.year <= 0) ? true : false; }} showModal={props.showModal}>
+    return <ModalWindow title={"Edit '" + props.book.name + "' book"} 
+                onHide={props.onHide} 
+                onSubmit={() => formik.handleSubmit()} 
+                isSubmitDisabled={() => { 
+                    return (formik.errors.author || formik.errors.name || formik.errors.genre || formik.errors.year || formik.values.year <= 0) ? true : false; }} 
+                    showModal={props.showModal}>
         <form onSubmit={formik.handleSubmit}>
         {errorMessage ? <div className="text-danger text-center">{errorMessage}</div> : <></>}
         
@@ -57,15 +76,20 @@ export default function UpdateBookModal(props: updateBookModalProps){
             onChange={formik.handleChange}
             value={formik.values.name}
         />
-        {formik.errors.year ? <label htmlFor="year" className="text-danger">Year is required and must be more than zero</label> : <label htmlFor="year">Year</label>}
+        {formik.errors.year ? <
+            label htmlFor="year" className="text-danger">Year is required and must be more than zero</label> 
+            : <label htmlFor="year">Year</label>}
         
         <input className="form-control"
             id="year"
             name="year"
+            type="number"
             onChange={formik.handleChange}
             value={formik.values.year}
         />
-        {formik.errors.genre ? <label htmlFor="genre" className="text-danger">Genre is required</label> : <label htmlFor="genre">Genre</label>}
+        {formik.errors.genre ? 
+            <label htmlFor="genre" className="text-danger">Genre is required</label> 
+            : <label htmlFor="genre">Genre</label>}
 
         <input className="form-control"
             id="genre"
@@ -74,7 +98,9 @@ export default function UpdateBookModal(props: updateBookModalProps){
             value={formik.values.genre}
         />
 
-        {formik.errors.author ? <label htmlFor="author" className="text-danger">Author is required</label> : <label htmlFor="author">Author</label>}
+        {formik.errors.author ? 
+            <label htmlFor="author" className="text-danger">Author is required</label> 
+            : <label htmlFor="author">Author</label>}
         <input className="form-control"
             id="author"
             name="author"
@@ -90,4 +116,7 @@ interface updateBookModalProps {
     onHide: () => void;
     showModal: boolean;
     getBooks: () => void;
+    getToken: () => string | null;
+    setToken: () => void;
+    books: Book[];
 }

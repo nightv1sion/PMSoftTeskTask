@@ -10,5 +10,6 @@ namespace Service.Contracts
     public interface IAuthenticationService
     {
         Task<string> CreateTokenAsync(UserForAuthenticationDto userForAuth);
+        Task RegisterUserAsync(UserForRegistrationDto userForRegistration);
     }
 }
