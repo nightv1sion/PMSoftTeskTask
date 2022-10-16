@@ -54,7 +54,7 @@ export default function BookList(props: bookListProps){
     }, [])
 
     return <div className="booklist">
-        <h1>Books Table</h1>
+        <h1>Book Table</h1>
         <div className="buttons-containter">
             <div className="delete-choosed-books">
                 {user && user.role=="admin" ? 
@@ -64,7 +64,7 @@ export default function BookList(props: bookListProps){
             </div>
             <div className="create-new-book">
                 {user && user.role=="admin" ? 
-                <Button onClick={() => setCreateBookModalForm(true)}>Create New</Button> 
+                <Button onClick={() => setCreateBookModalForm(true)}>Create Book</Button> 
                 : null}
             </div>
         </div>
