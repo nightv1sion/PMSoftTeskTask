@@ -67,7 +67,7 @@ namespace API.Extensions
         public static void ConfigureSeedData(this IServiceCollection services)
         {
             services.AddScoped<IdentityDataSeeder>();
-            services.AddHostedService<SetupIdentityDataSeeder>();
+            // services.AddHostedService<SetupIdentityDataSeeder>();
         }
         public static void ConfigureAuthorization(this IServiceCollection services)
         {

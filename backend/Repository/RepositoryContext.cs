@@ -12,7 +12,9 @@ namespace Repository
 {
     public class RepositoryContext : IdentityDbContext<IdentityUser<Guid>, IdentityRole<Guid>, Guid>
     {
-        public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options) {}
+        public RepositoryContext(DbContextOptions<RepositoryContext> options) : base(options) 
+        {
+        }
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
