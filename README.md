@@ -1,26 +1,22 @@
 # ПМСОФТ Тестовое задание
 
-### Для запуска системы необходимо:
-1. Cоздать базу данных и схему из миграции (необходимо иметь установленные [.NET](https://learn.microsoft.com/ru-ru/dotnet/core/install/windows?tabs=net60) и [EF Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet), так же необходимо иметь установленный [PostgreSQL](https://www.postgresql.org/download/) (поменять в случае необходимости учётные данные в backend/API/appsettings.json в строке 'postgreSqlConnection' (идут после 'Username' и 'Password')):
+### Для запуска при помощи Docker
 
-- Открыть папку backend/API в командной строке
-- Ввести команду: 
-  
-       dotnet ef database update
- 
-2. Запустить серверное приложение (необходимо иметь установленные [.NET](https://learn.microsoft.com/ru-ru/dotnet/core/install/windows?tabs=net60) и [EF Core CLI](https://learn.microsoft.com/en-us/ef/core/cli/dotnet):
-- Открыть папку backend/API в командной строке
-- Ввести команду для запуска приложения: 
-  
-       dotnet run
-3. Запустить клиентское приложение (необходимо иметь установленные [Node.js и npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm)):
-- Открыть папку frontend в командной строке
-- Ввести команду для установки необходимых зависимостей: 
+- Клонировать репозиторий
+- перейти в папку, в которую клонирован репозиторий и открыть в ней терминал
+- создать HTTPS сертификаты
+         
+         dotnet dev-certs https --clean
+         
+         dotnet dev-certs https -ep ./backend/conf.d/https/pmsoft.pfx -p Password123!
+         
+         dotnet dev-certs https --trust
+         
+- запустить docker-compose
 
-       npm install
-- Ввести команду для запуска приложения:
-       
-       npm start
+      docker-compose up --build
+- подождать пока запустится и перейти на страницу: "http://localhost:3000/"
+
 
 ### Рекомендации по использованию системы:
 1. Для просмотра всех записей (книг) нужно перейти во вкладку Books в навигационной панеле.
