@@ -10,8 +10,8 @@ using Repository;
 namespace API.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    [Migration("20221014190049_IdentityMigration")]
-    partial class IdentityMigration
+    [Migration("20221028111441_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

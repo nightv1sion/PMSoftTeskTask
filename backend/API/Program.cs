@@ -15,18 +15,17 @@ namespace API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
 
             var host = CreateHostBuilder(args).Build();
 
-            using (var scope = host.Services.CreateScope())
-            {
-                var services = scope.ServiceProvider;
-                var context = services.GetRequiredService<RepositoryContext>();
-                context.Database.Migrate();
-                context.Database.EnsureCreated();
-            }
+            // using (var scope = host.Services.CreateScope())
+            // {
+            //     var services = scope.ServiceProvider;
+            //     var context = services.GetRequiredService<RepositoryContext>();
+            //     context.Database.Migrate();
+            // }
 
             host.Run();
         }
