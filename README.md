@@ -30,7 +30,7 @@
         По умолчанию создаётся один админ со следующими данными username: 'admin', password: 'admin'
 
 ### Технологии:
-#### React (TypeScript) + .NET 5 + PostgreSQL (версия .NET и база данных выбраны исходя из используемых в компании)
+#### React (TypeScript) + .NET 5 + PostgreSQL (версия .NET и база данных выбраны исходя из используемых в компании) + Docker
 #### .NET
 * Аутентицикация и авторизация при помощи JWT
 * Repository Pattern
@@ -38,6 +38,7 @@
 * Global Error Handling
 * Async Code
 * ASP.NET Core Identity
+* Unit Testing (xUnit + FakeItEasy + FluentAssertions)
 
 #### React (TypeScript)
 * React-Router
