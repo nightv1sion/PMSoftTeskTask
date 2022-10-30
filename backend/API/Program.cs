@@ -20,13 +20,6 @@ namespace API
 
             var host = CreateHostBuilder(args).Build();
 
-            // using (var scope = host.Services.CreateScope())
-            // {
-            //     var services = scope.ServiceProvider;
-            //     var context = services.GetRequiredService<RepositoryContext>();
-            //     context.Database.Migrate();
-            // }
-
             host.Run();
         }
 

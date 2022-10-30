@@ -21,7 +21,6 @@ namespace API.Controllers
         [HttpGet("all")]
         public async Task<ActionResult> GetAllBooks()
         {
-            var claims = User.Claims;
             var books = await _service.BookService.GetAllBooksAsync(false);
             return Ok(books);
         }

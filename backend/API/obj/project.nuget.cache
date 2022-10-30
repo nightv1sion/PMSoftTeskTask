@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Js5jXMPmIFgiJO7e+H4pBiR2/vD7NIw8ZYk0WZkxoRajp78EvI5k9WwpS29lCGNX7mxzsVeIHrRqoC7y6nvZlA==",
+  "dgSpecHash": "xo9WxYTMzfNG14GpepEKZppGw4W1c9p6Craq1ZXV+aoAS+3MZ2g9acyQlmYCLDduqCRu4F8M/lNaO8kF8HJoIg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Данила\\Desktop\\PMSoftTestTask\\backend\\api\\API.csproj",
+  "projectFilePath": "C:\\Users\\Данила\\Desktop\\PMSoftTestTask\\backend\\API\\API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Данила\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
