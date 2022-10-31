@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PBiHqajBxqVUUedoXapisMyQSbiV1/A+4y1/5HCyJC0I9FjDA9tlCE4nwUvTb7idhWge6lM9spLAF8n4g2eo1g==",
+  "dgSpecHash": "1sD2qnq7ut1RNyTGcjSJGaKwyy7anTFDWE02ZIqj9oZTm5JuLPdIgKVXU82+y7ycntvwa9aQ6dA0AAKY/wMYOQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\Данила\\Desktop\\PMSoftTestTask\\backend\\API.Tests\\API.Tests.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.entityframeworkcore\\5.0.17\\microsoft.entityframeworkcore.5.0.17.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\5.0.17\\microsoft.entityframeworkcore.abstractions.5.0.17.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\5.0.17\\microsoft.entityframeworkcore.analyzers.5.0.17.nupkg.sha512",
+    "C:\\Users\\Данила\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\5.0.17\\microsoft.entityframeworkcore.inmemory.5.0.17.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\5.0.17\\microsoft.entityframeworkcore.relational.5.0.17.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.entityframeworkcore.relational.design\\1.1.0\\microsoft.entityframeworkcore.relational.design.1.1.0.nupkg.sha512",
     "C:\\Users\\Данила\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",

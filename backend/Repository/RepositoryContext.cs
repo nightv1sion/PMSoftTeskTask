@@ -20,6 +20,6 @@ namespace Repository
         {
             base.OnModelCreating(builder);
         }
-        DbSet<Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; }
     }
 }

@@ -156,3 +156,4 @@ C:\Users\Данила\Desktop\PMSoftTestTask\backend\API.Tests\bin\Debug\net5.0\
 C:\Users\Данила\Desktop\PMSoftTestTask\backend\API.Tests\bin\Debug\net5.0\Repository.pdb
 C:\Users\Данила\Desktop\PMSoftTestTask\backend\API.Tests\bin\Debug\net5.0\Service.pdb
 C:\Users\Данила\Desktop\PMSoftTestTask\backend\API.Tests\bin\Debug\net5.0\Shared.pdb
+C:\Users\Данила\Desktop\PMSoftTestTask\backend\API.Tests\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.InMemory.dll
